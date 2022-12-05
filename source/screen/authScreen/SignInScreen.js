@@ -5,16 +5,17 @@ import Header from '../../component/header';
 import * as Animatable from 'react-native-animatable'
 import { Icon, Button } from "react-native-elements";
 
-export function SignInScreen(){
+export function SignInScreen({navigation}){
 
     const[TextInput2Focused, setTextInput2Focused] = useState(false)
+    const[TextInput3Focused, setTextInput3Focused] = useState(false)
 
     const textInput1 = useRef(1)
     const textInput2 = useRef(2)
 
     return(
         <View style = {styles.container}>
-            <Header title = "MY ACCOUNT" type = "arrow-left"/>
+            <Header title = "MY ACCOUNT" type = "arrow-left" navigation = {navigation}/>
             <View style ={{marginLeft : 20, marginTop : 10}}>
                 <Text style = {title}>Sign-In</Text>
             </View>
@@ -25,7 +26,7 @@ export function SignInScreen(){
             <View>
                 <View style = {{marginTop : 20}}></View>
                 <View style = {styles.TextInput1}>
-                    <Animatable.View>
+                    <Animatable.View animation = {TextInput3Focused? "" : "fadeInLeft"} duration = {400}>
                         <Icon 
                             name = "email"
                             iconStyle={{color : colors.grey3}}
@@ -36,6 +37,12 @@ export function SignInScreen(){
                         style = {{width : "91%"}}
                         placeholder = "Email"
                         ref = {textInput1}
+                        onFocus = {() => {
+                            setTextInput3Focused(false)
+                        }}
+                        onBlur = {() => {
+                            setTextInput3Focused(true)
+                        }}
                     />  
                 </View>
                 <View style = {styles.TextInput2}>

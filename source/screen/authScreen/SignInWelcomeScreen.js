@@ -5,7 +5,7 @@ import * as Animatable from 'react-native-animatable'
 import { Icon, Button } from "react-native-elements";
 import Swiper from "react-native-swiper";
 
-export default function SignInWelcomeScreen(){
+export default function SignInWelcomeScreen({navigation}){
     return(
         <View style = {{flex : 1}}>
             <View style = {{flex : 3, justifyContent : 'flex-start', alignItems : 'center', paddingTop : 20}}>
@@ -13,7 +13,7 @@ export default function SignInWelcomeScreen(){
                 <Text style = {{fontSize : 26, color : colors.buttons, fontWeight : 'bold'}}>IN YOUR AREA</Text>
             </View>
             <View style = {{flex : 4, justifyContent : "center"}}>
-                <Swiper>
+                <Swiper autoplay = {true}>
                     <View style = {styles.slide1}>
                         <Image 
                             source = {{uri:"https://cdn0-production-images-kly.akamaized.net/YHppKTMNcRz87-cP2Wrg5Ye8mFc=/1x112:1000x675/1200x675/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/3245094/original/043061400_1600750232-shutterstock_1786027046.jpg"}}
@@ -32,6 +32,12 @@ export default function SignInWelcomeScreen(){
                             style = {{height : "100%", width : "100%"}}
                         />
                     </View>
+                    <View style = {styles.slide4}>
+                        <Image 
+                            source = {{uri:"https://images.tokopedia.net/img/KRMmCm/2022/8/23/2ff587d4-f921-4979-a47d-0aad39519752.jpg"}}
+                            style = {{height : "100%", width : "100%"}}
+                        />
+                    </View>
                 </Swiper>
             </View>
             <View style = {{flex : 4, justifyContent : "flex-end", marginBottom : 20}}>
@@ -40,6 +46,9 @@ export default function SignInWelcomeScreen(){
                         title = "SIGN IN"
                         buttonStyle = {parameters.styleButton}
                         titleStyle = {parameters.buttonTitle}
+                        onPress = {() => {
+                            navigation.navigate("SignInScreen")
+                        }}
                     />
                 </View>
                 <View style = {{marginHorizontal : 20, marginTop : 20}}>
@@ -72,6 +81,13 @@ const styles = StyleSheet.create({
         justifyContent : 'center',
         alignItems : 'center',
         backgroundColor : '#92bbd9'
+    },
+
+    slide4 : {
+        flex : 1,
+        justifyContent : 'center',
+        alignItems : 'center',
+        backgroundColor : '#9dd6eb'
     },
 
     createButton : {

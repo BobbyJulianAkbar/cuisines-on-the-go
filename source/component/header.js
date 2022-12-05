@@ -3,7 +3,7 @@ import {View, Text, StyleSheet, Dimensions} from 'react-native'
 import {colors, parameters} from "../global/styles"
 import { Icon } from "react-native-elements";
 
-export default function Header({title, type}){
+export default function Header({title, type, navigation}){
 
     return(
         <View style = {styles.header}>
@@ -13,7 +13,7 @@ export default function Header({title, type}){
                     name = {type}
                     color = {colors.headerText}
                     size = {28}
-                    onPress = {() => {}}
+                    onPress = {() => {navigation.goBack()}}
                 />
             </View>
             <View>
