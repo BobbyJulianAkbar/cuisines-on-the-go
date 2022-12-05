@@ -2,6 +2,7 @@ import React from "react";
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack'
 import SignInWelcomeScreen from "../screen/authScreen/SignInWelcomeScreen";
 import { SignInScreen } from "../screen/authScreen/SignInScreen";
+import HomeScreen from "../screen/HomeScreen";
 
 const Auth = createStackNavigator();
 
@@ -19,6 +20,14 @@ export default function AuthStack(){
             <Auth.Screen 
                 name = "SignInScreen"
                 component = {SignInScreen}
+                option = {{
+                    headersShown : false,
+                    ...TransitionPresets.RevealFromBottomAndroid
+                }}
+            />
+            <Auth.Screen 
+                name = "HomeScreen"
+                component = {HomeScreen}
                 option = {{
                     headersShown : false,
                     ...TransitionPresets.RevealFromBottomAndroid
