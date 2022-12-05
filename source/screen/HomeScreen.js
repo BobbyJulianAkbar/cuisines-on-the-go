@@ -1,9 +1,12 @@
 import React, {useState} from "react";
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, FlatList, Pressable, Image } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, FlatList, Pressable, Image, Dimensions } from "react-native";
 import { Icon } from "react-native-elements";
 import HomeHeader from "../component/HomeHeader";
 import { colors, parameters } from "../global/styles";
-import {filterData} from '../global/Data'
+import { filterData, restaurantsData } from '../global/Data'
+import FoodCard from "../component/FoodCard";
+
+const SCREEN_WIDTH = Dimensions.get('window').width
 
 export default function HomeScreen(){
     const [delivery, setDelivery] = useState(true)
