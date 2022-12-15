@@ -80,7 +80,7 @@ export function SignInScreen({navigation}){
                     title = "SIGN IN"
                     buttonStyle = {parameters.styleButton}
                     titleStyle = {parameters.buttonTitle}
-                    onPress = {() => {navigation.navigate("HomeScreen")}}
+                    onPress = {() => {navigation.navigate("RootClientTabs")}}
                 />
             </View>
             <View style = {{alignItems : "center", marginTop : 15}}>
@@ -149,13 +149,13 @@ const styles = StyleSheet.create ({
         justifyContent : "center",
         borderRadius : 12,
         borderWidth : 1,
-        borderColor : "#ff8c52",
+        borderColor : "#2452cb",
         height : 40,
         paddingHorizontal : 20
     },
 
     createButtonTitle : {
-        color : "#ff8c52",
+        color : "#2452cb",
         fontSize : 16,
         fontWeight : "bold",
         alignItems : "center",

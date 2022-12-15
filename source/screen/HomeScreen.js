@@ -9,7 +9,7 @@ import FoodCard from '../component/FoodCard';
 
 const SCREEN_WIDTH = Dimensions.get('window').width
 
-export default function HomeScreen(){
+export default function HomeScreen({navigation}){
     const [delivery, setDelivery] = useState(true)
     const [indexCheck, setindexCheck] = useState("0")
     return(
@@ -23,7 +23,7 @@ export default function HomeScreen(){
                                 <Text style = {styles.deliveryText}>Delivery</Text>
                             </View>
                         </TouchableOpacity>
-                        <TouchableOpacity onPress = {() => {setDelivery(false)}}>
+                        <TouchableOpacity onPress = {() => {setDelivery(false); navigation.navigate("RestaurantMapScreen")}}>
                             <View style = {{...styles.deliveryButton,backgroundColor : delivery? colors.grey4 : colors.buttons}}>
                                 <Text style = {styles.deliveryText}>Pick Up</Text>
                             </View>
@@ -167,6 +167,19 @@ export default function HomeScreen(){
                     }
                 </View>
             </ScrollView>
+            { delivery &&
+            <View style = {styles.floatButton}>
+                <TouchableOpacity onPress = {() => {navigation.navigate('RestaurantMapScreen')}}>
+                    <Icon
+                        name = "place"
+                        type = "material"
+                        size = {32}
+                        color = {colors.buttons}
+                    />
+                    <Text style = {{color : colors.grey2}}>Map</Text>
+                </TouchableOpacity>
+            </View>
+            }
         </View>
     )
 }
@@ -256,5 +269,16 @@ const styles = StyleSheet.create({
     smallCardText : {
         fontWeight : "bold",
         color : colors.grey2,
+    },
+    floatButton : {
+        position : 'absolute',
+        bottom : 10,
+        right : 15,
+        backgroundColor : 'white',
+        elevation : 10,
+        width : 60,
+        height : 60,
+        borderRadius : 30,
+        alignItems : 'center'
     }
 })
