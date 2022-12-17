@@ -14,7 +14,7 @@ export default function HomeScreen({navigation}){
     const [indexCheck, setindexCheck] = useState("0")
     return(
         <View style = {styles.container}>
-            <HomeHeader/>
+            <HomeHeader navigation = {navigation}/>
             <ScrollView stickyHeaderIndices = {[0]} showsVerticalScrollIndicator = {true}>
                 <View style = {{backgroundColor : colors.cardbackground, paddingBottom : 5}}>
                     <View style = {{marginTop : 10, flexDirection : 'row', justifyContent : 'space-evenly'}}>

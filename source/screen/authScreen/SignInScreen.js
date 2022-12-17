@@ -80,7 +80,7 @@ export function SignInScreen({navigation}){
                     title = "SIGN IN"
                     buttonStyle = {parameters.styleButton}
                     titleStyle = {parameters.buttonTitle}
-                    onPress = {() => {navigation.navigate("RootClientTabs")}}
+                    onPress = {() => {navigation.navigate("DrawerNav")}}
                 />
             </View>
             <View style = {{alignItems : "center", marginTop : 15}}>
