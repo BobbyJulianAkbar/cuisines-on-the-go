@@ -1,11 +1,4 @@
-import React from "react";
-import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import { Icon } from "react-native-elements";
-import { colors } from "../global/styles";
-import HomeScreen from "../screen/HomeScreen";
-import SearchScreen from "../screen/SearchScreen"
-import MyOrderScreen from "../screen/MyOrderScreen";
-import MyAccountScreen from "../screen/MyAccountScreen";
+
 
 const ClientTabs = createBottomTabNavigator();
 
