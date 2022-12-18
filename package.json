@@ -1,5 +1,5 @@
 {
-  "name": "cuisines-on-the-go",
+  "name": "cuisines",
   "version": "1.0.0",
   "main": "node_modules/expo/AppEntry.js",
   "scripts": {
