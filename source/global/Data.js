@@ -60,8 +60,6 @@ export const restaurantsData = [
     ],
     id : 3},
 ]
-<<<<<<< HEAD
-
 export const productData = [
     {name:"Nasi Sayur", price:7000,image:"https://media-cdn.tripadvisor.com/media/photo-s/0e/2d/32/1d/nasi-mie-ayam-sayur-super.jpg",
     details:"Menu klasik perpaduan nasi dengan sayur",id:0},
@@ -77,5 +75,3 @@ export const productData = [
     {name:"Nasi Ikan", price:10000,image:"https://cdn0-production-images-kly.akamaized.net/z0xbN5msqeMGS0ewDhX9qYWrsqA=/469x260/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2728727/original/051151100_1550134812-shutterstock_1208794342.jpg",
     details:"Dengan lauk ikan",id:5},
 ];
-=======
->>>>>>> 1ab86271228c93fe3b89b3481c2d85cf645998e5
