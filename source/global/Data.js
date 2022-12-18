@@ -8,6 +8,17 @@ export const filterData = [
     {name : "Barat", image : require("../Assets/Steak.png"), id : "6"},
 ];
 
+export const filterData2 = [
+    {name : "Cepat Saji", image : "https://res.cloudinary.com/dk0z4ums3/image/upload/v1618810887/attached_image/yang-didapatkan-dari-makanan-cepat-saji.jpg", id : "0"},
+    {name : "Jajanan", image : "https://asset.kompas.com/crops/KDZ5xpSOSRVg48h82mlrERW79hg=/0x48:1000x715/750x500/data/photo/2020/11/13/5fadda8a15dde.jpg", id : "1"},
+    {name : "Manis", image : "https://cdn-2.tstatic.net/travel/foto/bank/images/macarons_20180216_110631.jpg", id : "2"},
+    {name : "Minuman", image : "https://glicowings.co.id/uploads/offline_activity/5-resep-minuman-dengan-es-krim-ala-kafe-hits-yang-nikmat-dan-segar/ecad8583c5c4992da3b0c7ef9921860c.jpg",id : "3"},
+    {name : "Aneka Nasi", image : "https://asset.kompas.com/crops/MX1baqT6Gow2FnJp6WfLpQ_txnU=/0x0:1000x667/750x500/data/photo/2020/07/20/5f14f97c83ca7.jpg", id : "4"},
+    {name : "Asia", image : "https://static.honestdocs.id/system/blog_articles/main_hero_images/000/002/990/original/Ikan_Mentah_Pada_Hidangan_Sushi__Aman_Untuk_di_Konsumsi.jpg", id : "5"},
+    {name : "Barat", image : "https://iamafoodblog.b-cdn.net/wp-content/uploads/2021/02/how-to-cook-steak-1061w.jpg", id : "6"},
+    {name : "Sea Food", image : "https://media-cdn.tripadvisor.com/media/photo-s/18/3a/09/6c/bonefish-seafood-platter.jpg", id : "7"},
+];
+
 export const restaurantsData = [
     {restaurantName : "Warung Prasmanan", farAway : "1.6",
     businessAddress : "Jalan Lapas, Jati Agung", images : 'https://assets.promediateknologi.com/crop/0x0:0x0/x/photo/2022/11/19/1620875728.jpg',
@@ -49,3 +60,19 @@ export const restaurantsData = [
     ],
     id : 3},
 ]
+
+export const productData = [
+    {name:"Nasi Sayur", price:7000,image:"https://media-cdn.tripadvisor.com/media/photo-s/0e/2d/32/1d/nasi-mie-ayam-sayur-super.jpg",
+    details:"Menu klasik perpaduan nasi dengan sayur",id:0},
+    {name:"Nasi Ayam", price:10000,image:"https://cdns.klimg.com/dream.co.id/resized/640x320/news/2022/08/28/207691/menunya-komplet-paket-nasi-ayam-bakar-di-jakarta-ini-sanggup-obati-rasa-lapar-2208287.jpg",
+    details:"Dengan Lauk ayam",id:1},
+    {name:"Nasi Ikan", price:10000,image:"https://cdn0-production-images-kly.akamaized.net/z0xbN5msqeMGS0ewDhX9qYWrsqA=/469x260/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2728727/original/051151100_1550134812-shutterstock_1208794342.jpg",
+    details:"Dengan lauk ikan",id:2},
+    
+    {name:"Nasi Sayur", price:7000,image:"https://media-cdn.tripadvisor.com/media/photo-s/0e/2d/32/1d/nasi-mie-ayam-sayur-super.jpg",
+    details:"Menu klasik perpaduan nasi dengan sayur",id:3},
+    {name:"Nasi Ayam", price:10000,image:"https://cdns.klimg.com/dream.co.id/resized/640x320/news/2022/08/28/207691/menunya-komplet-paket-nasi-ayam-bakar-di-jakarta-ini-sanggup-obati-rasa-lapar-2208287.jpg",
+    details:"Dengan Lauk ayam",id:4},
+    {name:"Nasi Ikan", price:10000,image:"https://cdn0-production-images-kly.akamaized.net/z0xbN5msqeMGS0ewDhX9qYWrsqA=/469x260/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2728727/original/051151100_1550134812-shutterstock_1208794342.jpg",
+    details:"Dengan lauk ikan",id:5},
+];

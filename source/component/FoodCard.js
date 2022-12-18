@@ -48,7 +48,7 @@ export default function FoodCard({
                             marginTop:3
                         }}
                     />
-                    <Text style ={styles.Min}> {farAway} Min</Text>
+                    <Text style ={styles.Min}> {farAway} km</Text>
                     </View>
 
                     <View style ={{flex:9, flexDirection:"row"}}>

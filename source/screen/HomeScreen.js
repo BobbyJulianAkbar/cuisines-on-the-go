@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import { View, Text, StyleSheet, TouchableOpacity, ScrollView, FlatList, Pressable, Image, Dimensions } from "react-native";
+import { View, Text, StyleSheet, TouchableOpacity, ScrollView, FlatList, Pressable, Image, Dimensions, StatusBar } from "react-native";
 import CountDown from "react-native-countdown-component";
 import { Icon } from "react-native-elements";
 import HomeHeader from "../component/HomeHeader";
@@ -14,6 +14,11 @@ export default function HomeScreen({navigation}){
     const [indexCheck, setindexCheck] = useState("0")
     return(
         <View style = {styles.container}>
+                    <StatusBar
+                        translucent
+                        barStyle = "light-content"
+                        backgroundColor = "rgba(255, 140, 82, 1)"
+                    />
             <HomeHeader navigation = {navigation}/>
             <ScrollView stickyHeaderIndices = {[0]} showsVerticalScrollIndicator = {true}>
                 <View style = {{backgroundColor : colors.cardbackground, paddingBottom : 5}}>
@@ -186,7 +191,8 @@ export default function HomeScreen({navigation}){
 
 const styles = StyleSheet.create({
     container : {
-        flex : 1
+        flex : 1,
+        paddingTop : 20
     },
 
     deliveryButton : {
