@@ -22,7 +22,6 @@
     },
     "android": {
       "package" : "com.brj.cuisines",
-      "googleServicesFile": "/global/google-services.json",
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "772488592736",
+    "project_id": "cuisines-on-the-go-77cf1",
+    "storage_bucket": "cuisines-on-the-go-77cf1.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:772488592736:android:414948abed47305df23205",
+        "android_client_info": {
+          "package_name": "com.brj.cuisines"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "772488592736-12oof2ebnt5o03568vnt8acqtf77j7bf.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAC1U2jZZGG0Wom0XA49yZA_kxMqShiIRY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "772488592736-12oof2ebnt5o03568vnt8acqtf77j7bf.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
