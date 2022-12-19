@@ -75,3 +75,258 @@ export const productData = [
     {name:"Nasi Ikan", price:10000,image:"https://cdn0-production-images-kly.akamaized.net/z0xbN5msqeMGS0ewDhX9qYWrsqA=/469x260/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2728727/original/051151100_1550134812-shutterstock_1208794342.jpg",
     details:"Dengan lauk ikan",id:5},
 ];
+export const menuData = [
+    {title : "IKAN", special : false, key:0},
+    {title : "AYAM", special : false,key : 1},
+    {title : "DAGING", special : false, key : 2},
+    {title : "SAYUR NANGKA", special : false, key : 3},
+    {title : "SAYUR HIJAU", special : false, key : 4},
+    {title : "SAYUR SUP", special : false, key : 5},
+    {title : "TAHU", special : false, key : 6},
+    {title : "TEMPE", special : false, key : 7},
+    {title : "TELUR", special : false, key : 8},
+    {title : "TEH", special : false, key : 9},
+    {title : "KOPI", special : false,key : 10},
+];
+export const specialData = [
+    {title : "LIMITED OFFER", key : 0},
+    {title : "SAMBEL SUPER PEDAS", key : 1},
+    {title : "NASI PORSI KULI", key : 2},
+    {title : "PROMO PAKET", key : 3},
+];
+export const menu = [
+    {key : 1, title : 'IKAN'},
+    {key : 2, title : 'AYAM'},
+    {key : 3, title : 'DAGING'},
+    {key : 4, title : 'SAYUR NANGKA'},
+    {key : 5, title : 'SAYUR HIJAU'},
+    {key : 6, title : 'SAYUR SUP'},
+    {key : 7, title : 'TAHU'},
+    {key : 8, title : 'TEMPE'},
+]
+
+export const menuDetailedData =[
+    { 
+      meal:"Nasi Sayur",
+      price:7000,
+      image:"https://media-cdn.tripadvisor.com/media/photo-s/0e/2d/32/1d/nasi-mie-ayam-sayur-super.jpg",
+      details:"Menu klasik perpaduan nasi dengan sayur",
+      preferenceTitle:["Pilih topping ekstra", "Pilih minuman 1", "Pilih minuman 2", "Makanan Sampingan?", "Tambahan lain?"],
+      preferenceData: [
+
+                      [{name:"Sambal Xtra Pedas",price:1000,checked:false,id:10},{name:"Sambal Terasi",price:1500,checked:false ,id:11},{name:'Sambal Kecap',price:2000,checked:false,id:12},
+                      ],
+
+                      [{name:"Air Putih",price:1000 ,checked:false,id:13 },{name:"Teh Tawar",price:3000 ,checked:false,id:14},{name:'Teh Manis Panas',price:4000,checked:false ,id:15},
+                      {name:'Teh Manis Dingin',price:5000 ,checked:false,id:16},{name:'Kopi Hitam',price:4000 ,checked:false,id:17},{name:'Fruit Tea Lemon',price:6000 ,checked:false,id:18},
+                      {name:'Pop Ice',price:4000 ,checked:false,id:19},{name:'Teh Sisri',price:3000 ,checked:false,id:20},
+                      ],
+
+                      [{name:"Air Putih",price:1000,checked:false ,id:21},{name:"Teh Tawar",price:3000,checked:false ,id:22},{name:'Teh Manis Panas',price:4000,checked:false ,id:23},
+                      {name:'Teh Manis Dingin',price:5000 ,checked:false,id:24},{name:'Kopi Hitam',price:4000 ,checked:false,id:25},{name:'Fruit Tea Lemon',price:6000,checked:false ,id:26},
+                      {name:'Pop Ice',price:4000,checked:false ,id:27},{name:'Teh Sisri',price:3000 ,checked:false,id:28},{name:'Kosong',price:0 ,checked:false,id:29},
+                        ],
+                          
+                      [{name:"Nasi Xtra",price:3000 ,checked:false,id:30},{name:"Lalapan",price:2000,checked:false ,id:31},{name:'Tempe & Tahu',price:2500,checked:false ,id:32},
+                      ],
+
+                      [
+                      {name:"NULL",price:0 ,checked:false,id:33},{name:"NULL",price:0 ,checked:false,id:34},{name:"NULL",price:0 ,checked:false,id:35},
+                      {name:"NULL",price:0 ,checked:false,id:36},{name:"NULL",price:0 ,checked:false,id:37},{name:"NULL",price:0 ,checked:false,id:38},
+                      {name:"NULL",price:0 ,checked:false ,id:39},{name:"NULL",price:0 ,checked:false,id:40},{name:"NULL",price:0,checked:false ,id:41},
+                      ],
+                      ],
+      minimum_quatity:[2,1,1,null,null],
+      counter:[0,0,0,0,0],
+      required: [true,true,true,false,false],              
+      id:0
+    },
+  
+    { 
+      meal:"Nasi Ayam", 
+      price:10000,
+      image:"https://cdns.klimg.com/dream.co.id/resized/640x320/news/2022/08/28/207691/menunya-komplet-paket-nasi-ayam-bakar-di-jakarta-ini-sanggup-obati-rasa-lapar-2208287.jpg",
+      details:"Dengan Lauk ayam",
+      preferenceTitle:["Pilih topping ekstra", "Pilih minuman 1", "Pilih minuman 2", "Makanan Sampingan?", "Tambahan lain?"],
+      preferenceData: [
+
+        [{name:"Sambal Xtra Pedas",price:1000,checked:false,id:0},{name:"Sambal Terasi",price:1500,checked:false ,id:1},{name:'Sambal Kecap',price:2000 ,checked:false,id:2},
+        ],
+
+        [{name:"Air Putih",price:1000 ,checked:false,id:0 },{name:"Teh Tawar",price:3000 ,checked:false,id:1},{name:'Teh Manis Panas',price:4000,checked:false ,id:2},
+        {name:'Teh Manis Dingin',price:5000 ,checked:false,id:3},{name:'Kopi Hitam',price:4000 ,checked:false,id:4},{name:'Fruit Tea Lemon',price:6000 ,checked:false,id:5},
+        {name:'Pop Ice',price:4000 ,checked:false,id:6},{name:'Teh Sisri',price:3000 ,checked:false,id:7},
+        ],
+
+        [{name:"Air Putih",price:1000,checked:false ,id:0},{name:"Teh Tawar",price:3000 ,checked:false ,id:1},{name:'Teh Manis Panas',price:4000,checked:false ,id:2},
+        {name:'Teh Manis Dingin',price:5000 ,checked:false,id:3},{name:'Kopi Hitam',price:4000 ,checked:false,id:4},{name:'Fruit Tea Lemon',price:6000,checked:false ,id:5},
+        {name:'Pop Ice',price:4000,checked:false ,id:6},{name:'Teh Sisri',price:3000 ,checked:false,id:7},{name:'Kosong',price:0 ,checked:false,id:8},
+          ],
+            
+        [{name:"Nasi Xtra",price:3000 ,checked:false,id:0},{name:"Lalapan",price:2000,checked:false ,id:1},{name:'Tempe & Tahu',price:2500,checked:false ,id:2},
+        ],
+
+        [
+        {name:"NULL",price:0 ,checked:false,id:0},{name:"NULL",price:0 ,checked:false,id:1},{name:"NULL",price:0 ,checked:false,id:2},
+        {name:"NULL",price:0 ,checked:false,id:3},{name:"NULL",price:0 ,checked:false,id:4},{name:"NULL",price:0 ,checked:false,id:5},
+        {name:"NULL",price:0,checked:false ,id:6},{name:"NULL",price:0 ,checked:false,id:7},{name:"NULL",price:0,checked:false ,id:8},
+        ],
+        ],
+        minimum_quatity:[2,1,2,null,null],
+        counter:[0,0,0,0,0],
+        required: [true,true,true,false,false], 
+        id:1
+    },
+  
+    {
+      meal:"Nasi Ikan",
+      price:10000,
+      image:"https://cdn0-production-images-kly.akamaized.net/z0xbN5msqeMGS0ewDhX9qYWrsqA=/469x260/smart/filters:quality(75):strip_icc():format(webp)/kly-media-production/medias/2728727/original/051151100_1550134812-shutterstock_1208794342.jpg",
+      details:"Dengan lauk ikan",
+      preferenceTitle:["Pilih topping ekstra", "Pilih minuman 1", "Pilih minuman 2", "Makanan Sampingan?", "Tambahan lain?"],
+      preferenceData: [
+
+        [{name:"Sambal Xtra Pedas",price:1000,checked:false,id:0},{name:"Sambal Terasi",price:1500,checked:false ,id:1},{name:'Sambal Kecap',price:2000 ,checked:false,id:2},
+        ],
+
+        [{name:"Air Putih",price:1000 ,checked:false,id:0 },{name:"Teh Tawar",price:3000 ,checked:false,id:1},{name:'Teh Manis Panas',price:4000,checked:false ,id:2},
+        {name:'Teh Manis Dingin',price:5000 ,checked:false,id:3},{name:'Kopi Hitam',price:4000 ,checked:false,id:4},{name:'Fruit Tea Lemon',price:6000 ,checked:false,id:5},
+        {name:'Pop Ice',price:4000 ,checked:false,id:6},{name:'Teh Sisri',price:3000 ,checked:false,id:7},
+        ],
+
+        [{name:"Air Putih",price:1000,checked:false ,id:0},{name:"Teh Tawar",price:3000,checked:false ,id:1},{name:'Teh Manis Panas',price:4000,checked:false ,id:2},
+        {name:'Teh Manis Dingin',price:5000 ,checked:false,id:3},{name:'Kopi Hitam',price:4000 ,checked:false,id:4},{name:'Fruit Tea Lemon',price:6000,checked:false ,id:5},
+        {name:'Pop Ice',price:4000,checked:false ,id:6},{name:'Teh Sisri',price:3000 ,checked:false,id:7},{name:'Kosong',price:0 ,checked:false,id:8},
+          ],
+            
+        [{name:"Nasi Xtra",price:3000 ,checked:false,id:0},{name:"Lalapan",price:2000,checked:false ,id:1},{name:'Tempe & Tahu',price:2500,checked:false ,id:2},
+        ],
+
+        [
+        {name:"NULL",price:0 ,checked:false,id:0},{name:"NULL",price:0 ,checked:false,id:1},{name:"NULL",price:0 ,checked:false,id:2},
+        {name:"NULL",price:0 ,checked:false,id:3},{name:"NULL",price:0 ,checked:false,id:4},{name:"NULL",price:0 ,checked:false,id:5},
+        {name:"NULL",price:0,checked:false ,id:6},{name:"NULL",price:0 ,checked:false,id:7},{name:"NULL",price:0,checked:false ,id:8},
+        ],
+        ],
+
+        minimum_quatity:[2,1,1,null,null],
+        counter:[0,0,0,0,0],
+        required: [true,true,true,false,false],   
+      id:2
+    },
+  
+    {
+      meal:"Nasi Sayur",
+      price:7000,
+      image:"https://media-cdn.tripadvisor.com/media/photo-s/0e/2d/32/1d/nasi-mie-ayam-sayur-super.jpg",
+      details:"Menu klasik perpaduan nasi dengan sayur",
+      preferenceTitle:["Pilih topping ekstra", "Pilih minuman 1", "Pilih minuman 2", "Makanan Sampingan?", "Tambahan lain?"],
+      preferenceData: [
+
+        [{name:"Sambal Xtra Pedas",price:1000,checked:false,id:0},{name:"Sambal Terasi",price:1500,checked:false ,id:1},{name:'Sambal Kecap',price:2000 ,checked:false,id:2},
+        ],
+
+        [{name:"Air Putih",price:1000 ,checked:false,id:0 },{name:"Teh Tawar",price:3000 ,checked:false,id:1},{name:'Teh Manis Panas',price:4000,checked:false ,id:2},
+        {name:'Teh Manis Dingin',price:5000 ,checked:false,id:3},{name:'Kopi Hitam',price:4000 ,checked:false,id:4},{name:'Fruit Tea Lemon',price:6000 ,checked:false,id:5},
+        {name:'Pop Ice',price:4000 ,checked:false,id:6},{name:'Teh Sisri',price:3000 ,checked:false,id:7},
+        ],
+
+        [{name:"Air Putih",price:1000,checked:false ,id:0},{name:"Teh Tawar",price:3000,checked:false ,id:1},{name:'Teh Manis Panas',price:4000,checked:false ,id:2},
+        {name:'Teh Manis Dingin',price:5000 ,checked:false,id:3},{name:'Kopi Hitam',price:4000 ,checked:false,id:4},{name:'Fruit Tea Lemon',price:6000,checked:false ,id:5},
+        {name:'Pop Ice',price:4000,checked:false ,id:6},{name:'Teh Sisri',price:3000 ,checked:false,id:7},{name:'Kosong',price:0 ,checked:false,id:8},
+          ],
+            
+        [{name:"Nasi Xtra",price:3000 ,checked:false,id:0},{name:"Lalapan",price:2000,checked:false ,id:1},{name:'Tempe & Tahu',price:2500,checked:false ,id:2},
+        ],
+
+        [
+        {name:"NULL",price:0 ,checked:false,id:0},{name:"NULL",price:0 ,checked:false,id:1},{name:"NULL",price:0 ,checked:false,id:2},
+        {name:"NULL",price:0 ,checked:false,id:3},{name:"NULL",price:0 ,checked:false,id:4},{name:"NULL",price:0 ,checked:false,id:5},
+        {name:"NULL",price:0,checked:false ,id:6},{name:"NULL",price:0 ,checked:false,id:7},{name:"NULL",price:0,checked:false ,id:8},
+        ],
+        ],
+      
+        minimum_quatity:[2,1,1,null,null],
+        counter:[0,0,0,0,0],
+        required: [true,true,true,false,false],    
+      id:3
+    },
+  
+    
+    { 
+      
+      meal:"Nasi Ayam", 
+      price:10000,
+      image:"https://cdns.klimg.com/dream.co.id/resized/640x320/news/2022/08/28/207691/menunya-komplet-paket-nasi-ayam-bakar-di-jakarta-ini-sanggup-obati-rasa-lapar-2208287.jpg",
+      details:"Dengan Lauk ayam",
+      
+      preferenceTitle:["Pilih topping ekstra", "Pilih minuman 1", "Pilih minuman 2", "Makanan Sampingan?", "Tambahan lain?"],
+      
+      preferenceData: [
+
+        [{name:"Sambal Xtra Pedas",price:1000,checked:false,id:0},{name:"Sambal Terasi",price:1500,checked:false ,id:1},{name:'Sambal Kecap',price:2000 ,checked:false,id:2},
+        ],
+
+        [{name:"Air Putih",price:1000 ,checked:false,id:0 },{name:"Teh Tawar",price:3000 ,checked:false,id:1},{name:'Teh Manis Panas',price:4000,checked:false ,id:2},
+        {name:'Teh Manis Dingin',price:5000 ,checked:false,id:3},{name:'Kopi Hitam',price:4000 ,checked:false,id:4},{name:'Fruit Tea Lemon',price:6000 ,checked:false,id:5},
+        {name:'Pop Ice',price:4000 ,checked:false,id:6},{name:'Teh Sisri',price:3000 ,checked:false,id:7},
+        ],
+
+        [{name:"Air Putih",price:1000,checked:false ,id:0},{name:"Teh Tawar",price:3000,checked:false ,id:1},{name:'Teh Manis Panas',price:4000,checked:false ,id:2},
+        {name:'Teh Manis Dingin',price:5000 ,checked:false,id:3},{name:'Kopi Hitam',price:4000 ,checked:false,id:4},{name:'Fruit Tea Lemon',price:6000,checked:false ,id:5},
+        {name:'Pop Ice',price:4000,checked:false ,id:6},{name:'Teh Sisri',price:3000 ,checked:false,id:7},{name:'Kosong',price:0 ,checked:false,id:8},
+          ],
+            
+        [{name:"Nasi Xtra",price:3000 ,checked:false,id:0},{name:"Lalapan",price:2000,checked:false ,id:1},{name:'Tempe & Tahu',price:2500,checked:false ,id:2},
+        ],
+
+        [
+        {name:"NULL",price:0 ,checked:false,id:0},{name:"NULL",price:0 ,checked:false,id:1},{name:"NULL",price:0 ,checked:false,id:2},
+        {name:"NULL",price:0 ,checked:false,id:3},{name:"NULL",price:0 ,checked:false,id:4},{name:"NULL",price:0 ,checked:false,id:5},
+        {name:"NULL",price:0,checked:false ,id:6},{name:"NULL",price:0 ,checked:false,id:7},{name:"NULL",price:0,checked:false ,id:8},
+        ],
+        ],
+
+      minimum_quatity:[2,1,1,null,null],
+      counter:[0,0,0,0,0],
+      required: [true,true,true,false,false],     
+      id:4
+    },
+
+    { 
+      meal:"Nasi Sayur",
+      price:7000,
+      image:"https://media-cdn.tripadvisor.com/media/photo-s/0e/2d/32/1d/nasi-mie-ayam-sayur-super.jpg",
+      details:"Menu klasik perpaduan nasi dengan sayur",
+      preferenceTitle:["Pilih topping ekstra", "Pilih minuman 1", "Pilih minuman 2", "Makanan Sampingan?", "Tambahan lain?"],
+      preferenceData: [
+
+                      [{name:"Sambal Xtra Pedas",price:1000,checked:false,id:10},{name:"Sambal Terasi",price:1500,checked:false ,id:11},{name:'Sambal Kecap',price:2000 ,checked:false,id:12},
+                      ],
+
+                      [{name:"Air Putih",price:1000 ,checked:false,id:13 },{name:"Teh Tawar",price:3000 ,checked:false,id:14},{name:'Teh Manis Panas',price:4000,checked:false ,id:15},
+                      {name:'Teh Manis Dingin',price:5000 ,checked:false,id:16},{name:'Kopi Hitam',price:4000 ,checked:false,id:17},{name:'Fruit Tea Lemon',price:6000 ,checked:false,id:18},
+                      {name:'Pop Ice',price:4000 ,checked:false,id:19},{name:'Teh Sisri',price:3000 ,checked:false,id:20},
+                      ],
+
+                      [{name:"Air Putih",price:1000,checked:false ,id:21},{name:"Teh Tawar",price:3000,checked:false ,id:22},{name:'Teh Manis Panas',price:4000,checked:false ,id:23},
+                      {name:'Teh Manis Dingin',price:5000 ,checked:false,id:24},{name:'Kopi Hitam',price:4000 ,checked:false,id:25},{name:'Fruit Tea Lemon',price:6000,checked:false ,id:26},
+                      {name:'Pop Ice',price:4000,checked:false ,id:27},{name:'Teh Sisri',price:3000 ,checked:false,id:28},{name:'Kosong',price:0 ,checked:false,id:29},
+                        ],
+                          
+                      [{name:"Nasi Xtra",price:3000 ,checked:false,id:30},{name:"Lalapan",price:2000,checked:false ,id:31},{name:'Tempe & Tahu',price:2500,checked:false ,id:32},
+                      ],
+
+                      [
+                      {name:"NULL",price:0 ,checked:false,id:33},{name:"NULL",price:0 ,checked:false,id:34},{name:"NULL",price:0 ,checked:false,id:35},
+                      {name:"NULL",price:0 ,checked:false,id:36},{name:"NULL",price:0 ,checked:false,id:37},{name:"NULL",price:0 ,checked:false,id:38},
+                      {name:"NULL",price:0,checked:false ,id:39},{name:"NULL",price:0 ,checked:false,id:40},{name:"NULL",price:0,checked:false ,id:41},
+                      ],
+                      ],
+      minimum_quatity:[2,1,1,null,null],
+      counter:[0,0,0,0,0],
+      required: [true,true,true,false,false],              
+      id:5
+    },
+  
+  ];

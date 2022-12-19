@@ -46,7 +46,7 @@ export default function SearchScreen({navigation}){
     )
 }
 
-const Footer = (props) => {
+const Footer = () => {
     const navigation = useNavigation();
     return(
         <View style = {{marginTop : 20, marginBottom : 30}}>

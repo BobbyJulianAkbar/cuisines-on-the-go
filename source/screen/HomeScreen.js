@@ -17,7 +17,7 @@ export default function HomeScreen({navigation}){
                     <StatusBar
                         translucent
                         barStyle = "light-content"
-                        backgroundColor = "rgba(255, 140, 82, 1)"
+                        backgroundColor = "rgba(30, 75, 207, 1)"
                     />
             <HomeHeader navigation = {navigation}/>
             <ScrollView stickyHeaderIndices = {[0]} showsVerticalScrollIndicator = {true}>
