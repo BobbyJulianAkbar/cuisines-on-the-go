@@ -1,10 +1,26 @@
 import React, { useState, useContext, useEffect } from "react";
-import { View, Text, Linking, Pressable, Alert, Switch, StyleSheet } from "react-native";
+import { View, Text, Linking, Pressable, Alert, Switch, StyleSheet, TouchableOpacity } from "react-native";
 import { DrawerContentScrollView, DrawerItemList, DrawerItem } from "@react-navigation/drawer";
 import { Avatar, Button, Icon } from "react-native-elements";
 import { colors } from "../global/styles";
+import { auth } from "../../firebase";
+import { useNavigation } from "@react-navigation/native";
+import { SignInContext } from "../content/authContent";
 
 export default function DrawerContent(props){
+
+    const {dispatchSignedIn} = useContext(SignInContext)
+    const navigation = useNavigation()
+
+    const handleSignOut = () => {
+        auth
+            .signOut()
+            .then(() => {
+                dispatchSignedIn({type:"UPDATE_SIGN_IN",payload:{userToken:null}})
+            })
+            .catch(error => alert(error.message))
+    }
+
     return(
         <View style = {styles.container}>
             <DrawerContentScrollView {...props}>
@@ -17,8 +33,8 @@ export default function DrawerContent(props){
                             source = {{uri : "https://cdn-icons-png.flaticon.com/512/25/25634.png"}}
                         />
                         <View style = {{marginLeft : 10}}>
-                            <Text style = {{fontWeight : 'bold', color : colors.cardbackground, fontSize : 18}}>Ucok Baba</Text>
-                            <Text style = {{color : colors.cardbackground, fontSize : 14}}>ucok@cuisinesonthego.com</Text>
+                            <Text style = {{fontWeight : 'bold', color : colors.cardbackground, fontSize : 18}}>User</Text>
+                            <Text style = {{color : colors.cardbackground, fontSize : 14}}>{auth.currentUser?.email}</Text>
                         </View>
                     </View>
                     <View style = {{flexDirection : 'row', justifyContent : 'space-evenly', paddingBottom : 5}}>
@@ -94,6 +110,7 @@ export default function DrawerContent(props){
                     </View>
                 </View>
             </DrawerContentScrollView>
+            <TouchableOpacity onPress = {handleSignOut}>
             <DrawerItem
                     label = "Sign Out"
                     icon = {({color, size}) => (
@@ -102,9 +119,11 @@ export default function DrawerContent(props){
                             name = "logout"
                             color = {color}
                             size = {size}
+                            onPress = {handleSignOut}
                         />
                     )}
                 />
+            </TouchableOpacity>
         </View>
     )
 }

@@ -1,14 +1,25 @@
-import React, {useState, useRef} from "react";
+import React, {useState, useRef, useEffect, useContext} from "react";
 import {View, Text, StyleSheet, Dimensions, TextInput} from 'react-native'
 import { colors, parameters, title } from "../../global/styles";
 import Header from '../../component/header';
 import * as Animatable from 'react-native-animatable'
 import { Icon, Button } from "react-native-elements";
 import { Formik } from "formik";
-import auth from '@react-native-firebase/auth'
-import { Alert } from "react-native";
+import { auth } from "../../../firebase";
+import { SignInContext } from "../../content/authContent";
 
 export function SignInScreen({navigation}){
+
+    const {dispatchSignedIn} = useContext(SignInContext)
+
+    useEffect(() => {
+        const unsubscribe = auth.onAuthStateChanged(user => {
+            if (user) {
+                dispatchSignedIn({type:"UPDATE_SIGN_IN",payload:{userToken:"signed-in"}})
+            }
+        })
+        return unsubscribe
+    }, [])
 
     const[TextInput2Focused, setTextInput2Focused] = useState(false)
     const[TextInput3Focused, setTextInput3Focused] = useState(false)
@@ -16,21 +27,17 @@ export function SignInScreen({navigation}){
     const textInput1 = useRef(1)
     const textInput2 = useRef(2)
 
-async function signIn(data){
-    try{
-    const {password,email} = data
-    const user = await auth().signInWithEmailAndPassword(email,password)
-    if(user){
-        console.log("USER SIGNED-IN")
+    const [email, setEmail] = useState('')
+    const [password, setPassword] = useState('')
+
+    const handleLogin = () => {
+        auth
+            .signInWithEmailAndPassword(email, password)
+            .then(userCredentials => {
+                console.log('Logged in with:', user.email)
+            })
+            .catch(error => alert(error.message))
     }
-}
-    catch(error){
-        Alert.alert(
-            error.name,
-            error.message
-        )
-    }
-}
 
     return(
         <View style = {styles.container}>
@@ -43,13 +50,7 @@ async function signIn(data){
                 <Text style = {styles.text1}>Please enter the email and password</Text>
                 <Text style = {styles.text1}>registered with your account</Text>
             </View>
-            <Formik
-                initialValues = {{email:'',password:''}}
-                onSubmit = {(values)=>{
-                    signIn(values)
-                }}
-                    >
-                    { (props)=>
+            <Formik>
                 <View>
                 <View>
                 <View style = {{marginTop : 20}}></View>
@@ -64,6 +65,7 @@ async function signIn(data){
                     <TextInput 
                         style = {{width : "91%"}}
                         placeholder = "Email"
+                        keyboardType = "email-address"
                         ref = {textInput1}
                         onFocus = {() => {
                             setTextInput3Focused(false)
@@ -71,8 +73,8 @@ async function signIn(data){
                         onBlur = {() => {
                             setTextInput3Focused(true)
                         }}
-                        onChangeText = {props.handleChange('email')}
-                        value = {props.values.email}
+                        onChangeText = {text => setEmail(text)}
+                        value = {email}
                     />  
                 </View>
                 <View style = {styles.TextInput2}>
@@ -94,8 +96,9 @@ async function signIn(data){
                         onBlur = {() => {
                             setTextInput2Focused(true)
                         }}
-                        onChangeText = {props.handleChange('password')}
-                        value = {props.values.password}
+                        onChangeText = {text => setPassword(text)}
+                        value = {password}
+                        secureTextEntry
                     />
                     <Animatable.View animation = {TextInput2Focused? "" : "fadeInLeft"} duration = {400}>
                         <Icon 
@@ -112,10 +115,10 @@ async function signIn(data){
                     title = "SIGN IN"
                     buttonStyle = {parameters.styleButton}
                     titleStyle = {parameters.buttonTitle}
-                    onPress = {props.handleSubmit}
+                    onPress = {handleLogin}
                 />
             </View>
-            </View>}
+            </View>
             </Formik>
             
             <View style = {{alignItems : "center", marginTop : 15}}>
@@ -132,6 +135,7 @@ async function signIn(data){
                     title = "Create an account"
                     buttonStyle = {styles.createButton}
                     titleStyle = {styles.createButtonTitle}
+                    onPress ={()=>{navigation.navigate("RegisterScreen")}}
                 />
             </View>
         </View>

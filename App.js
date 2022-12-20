@@ -1,17 +1,20 @@
 import React from "react";
 import { View, Text, StyleSheet, StatusBar } from "react-native";
+import { SignInContextProvider } from "./source/content/authContent";
 import { colors } from "./source/global/styles";
 import RootNavigator from "./source/navigation/RootNavigator";
 
 export default function App(){
   return(
-    <View style = {styles.container}>
-      <StatusBar
-        barStyle = "light-content"
-        backgroundColor = {colors.statusbar}
-      />
-      <RootNavigator/>
-    </View>
+    <SignInContextProvider>
+      <View style = {styles.container}>
+        <StatusBar
+          barStyle = "light-content"
+          backgroundColor = {colors.statusbar}
+        />
+        <RootNavigator/>
+      </View>
+    </SignInContextProvider>
   )
 }
 

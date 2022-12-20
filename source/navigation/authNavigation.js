@@ -1,15 +1,12 @@
 import React from "react";
 import { createStackNavigator, TransitionPresets } from '@react-navigation/stack'
 import SignInWelcomeScreen from "../screen/authScreen/SignInWelcomeScreen";
-import { SignInScreen } from "../screen/authScreen/SignInScreen";
-import HomeScreen from "../screen/HomeScreen";
-import RootClientTabs from "./ClientTabs";
-import RestaurantMapScreen from "../screen/RestaurantMapScreen";
-import DrawerNav from "./DrawerNav";
+import {SignInScreen} from "../screen/authScreen/SignInScreen";
+import { RegisterScreen } from "../screen/authScreen/RegisterScreen";
 
 const Auth = createStackNavigator();
 
-export default function AuthStack(){
+export function AuthStack(){
     return(
         <Auth.Navigator>
             <Auth.Screen 
@@ -29,21 +26,13 @@ export default function AuthStack(){
                 }}
             />
             <Auth.Screen 
-                name = "DrawerNav"
-                component = {DrawerNav}
+                name = "RegisterScreen"
+                component = {RegisterScreen}
                 option = {{
                     headersShown : false,
                     ...TransitionPresets.RevealFromBottomAndroid
                 }}
-            />
-            <Auth.Screen 
-                name = "RestaurantMapScreen"
-                component = {RestaurantMapScreen}
-                option = {{
-                    headersShown : false,
-                    ...TransitionPresets.RevealFromBottomAndroid
-                }}
-            />
+            /> 
         </Auth.Navigator>
     )
 }

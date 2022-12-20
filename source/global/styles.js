@@ -61,7 +61,6 @@ export const fonts = {
         lightItalic : 'Roboto-LightItalic',
         medium : 'Roboto-Medium',
         mediumItalic : 'Roboto-MediumItalic',
-        bold : 'Roboto-Bold',
         boldItalic : 'Roboto-BoldItalic',
         condensed : 'RobotoCondensed-Regular',
         condensedItalic : 'RobotoCondensed-Italic'

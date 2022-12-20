@@ -95,15 +95,6 @@ export default function HomeScreen({navigation}){
                 </View>
                 <View>
                     <View style = {{flexDirection : 'row', alignItems : "center"}}>
-                        <Text style = {{marginLeft : 15, fontSize : 16, marginTop : -10, marginRight : 5}}>Options changing in</Text>
-                        <CountDown
-                            until = {3600}
-                            size = {14}
-                            digitStyle = {{backgroundColor : colors.lightgreen}}
-                            digitTxtStyle = {{color : colors.cardbackground}}
-                            timeToShow = {['M', 'S']}
-                            timeLabels = {{m : 'Min', s : 'Sec'}}
-                        />
                     </View>
                     <FlatList
                         style = {{marginTop:10,marginBottom:10}}
